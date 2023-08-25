@@ -1,10 +1,16 @@
 import os
+from dotenv import load_dotenv
+load_dotenv()
+OPENAI_API_KEY=os.getenv('OPENAI_API_KEY')
+
 from typing import Optional, Tuple
 from threading import Lock
 
 import gradio as gr
 
 from query_data import get_basic_qa_chain
+
+
 
 
 def set_openai_api_key(api_key: str):
